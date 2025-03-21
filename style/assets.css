@@ -1,1 +1,17 @@
-// buttons etc
+.food-imgs{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.atf-overlay-img{
+    width: 80px;
+    height: 80px;
+    margin: -40px;
+    border: solid #a59627;
+    border-radius: 48px
+}
+.atf-pics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
