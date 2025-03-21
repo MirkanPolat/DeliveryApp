@@ -15,3 +15,7 @@
     flex-direction: column;
     align-items: center;
 }
+.under-text{
+    color: #edac86;
+    font-size: 16px;
+}

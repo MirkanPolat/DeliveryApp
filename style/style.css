@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  font-family:"Schoolbell"
 }
+
 header {
   top: 0;
   left: 0;
@@ -21,6 +23,9 @@ footer {
   height: 80px;
   background-color: #ff8b00;
 }
+h1{
+    font-size: 27px;
+}
 .menu {
   height: 50px;
   width: 50px;
@@ -39,7 +44,8 @@ footer {
   min-height: calc(100vh - 160px);
   max-width: 1440px;
   margin: 0 auto;
-
+    padding-left: 10px;
+    padding-right: 10px;
   display: flex;
 }
 .leftPart {
@@ -50,4 +56,18 @@ footer {
     flex-grow: 1;
     position: sticky;
     top: 0;
+}
+.menu-bar{
+    height: 43px;
+    width: 100%;
+    background-color: #b1a79e8e;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-left: 17px;
+}
+.menu-bar img{
+    width: 30px;
+    transform: rotate(45deg);
 }
