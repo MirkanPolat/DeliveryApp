@@ -60,7 +60,7 @@ h1{
 .menu-bar{
     height: 43px;
     width: 100%;
-    background-color: #b1a79e8e;
+    background-color: #b1a79e33;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -70,4 +70,18 @@ h1{
 .menu-bar img{
     width: 30px;
     transform: rotate(45deg);
+}
+.dishes{
+   
+    width: 100%;
+    height: auto;
+    border: solid 1px;
+    background-color: rgba(122, 120, 120, 0.283);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.dishes-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
