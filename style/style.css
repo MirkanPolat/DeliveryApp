@@ -52,7 +52,7 @@ h1{
   width: calc(100% - 200px);
 }
 .rightPart {
-    width: 200px;
+    width: 300px;
     flex-grow: 1;
     position: sticky;
     top: 0;
@@ -88,13 +88,4 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.myBasketsDiv{
-    display: flex;
-    align-items: center;
-}
-.empty-basket{
-    width: 100px;
-    height: 500px;
-    font-size: 18px;
 }
