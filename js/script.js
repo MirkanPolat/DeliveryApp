@@ -1,19 +1,24 @@
-function renderMenus() {
-  let menuLeft = document.getElementById("menuList");
+function renderMenus() { 
+  let menuLeft = document.getElementById("menuList"); // rendert das menu
   menuLeft.innerHTML = "";
 
   for (let i = 0; i < myDishes.length; i++) {
-    menuLeft.innerHTML += renderMenuTemplate(i);
+    menuLeft.innerHTML += renderMenuTemplate(i); // html wird returnt
   }
-  let basket = document.getElementById("rightPart");
+
+  let basket = document.getElementById("basket");
   basket.innerHTML = "";
 
+  if(myBasket.length === 0){
+    basket.innerHTML += emptyBasket();
+  }else{
   for (let y = 0; y < myBasket.length; y++) {
     basket.innerHTML += renderBasketTemplate(y);
   }
 }
+}
 
-function renderMenuTemplate(i) {
+function renderMenuTemplate(i) { // rendert das linke menu 
   return /*html*/ `
     <div class="dishes"> 
         <div class="dishes-header">
@@ -26,8 +31,22 @@ function renderMenuTemplate(i) {
     </div>
     `;
 }
-function renderBasketTemplate(y){
+function renderBasketTemplate(y){ // rendert den warenkorb
     return /*html*/`
-        <p>Wadflkmwfklwnfljwfnlfwf</p>
+        <div class="myBasketsDiv">
+            <div><p></p></div>
+        </div>
+    `
+    /* <div class="myBasketsDiv" >
+            <p>${myBasket[y].name}</p>
+        </div> */
+
+}
+
+function emptyBasket(){ // zeigt den leeren Warenkorb an 
+    return /*html*/`
+        <div class="empty-basket">
+        <p>ergregre</p>
+        </div>
     `
 }

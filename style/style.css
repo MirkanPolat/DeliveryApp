@@ -56,6 +56,10 @@ h1{
     flex-grow: 1;
     position: sticky;
     top: 0;
+    background-color: #c1beba;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .menu-bar{
     height: 43px;
@@ -84,4 +88,13 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.myBasketsDiv{
+    display: flex;
+    align-items: center;
+}
+.empty-basket{
+    width: 100px;
+    height: 500px;
+    font-size: 18px;
 }

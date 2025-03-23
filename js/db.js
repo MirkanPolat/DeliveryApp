@@ -32,35 +32,4 @@ let myDishes = [
 ];
 
 
-let myBasket = [
-    {
-        "name": "",
-        "price": "",
-        "description": "",
-        "amount": ""
-    },
-    {
-        "name": "",
-        "price": "",
-        "description": "",
-        "amount": ""
-    },
-    {
-        "name": "",
-        "price": "",
-        "description": "",
-        "amount": ""
-    },
-    {
-        "name": "",
-        "price": "",
-        "description": "",
-        "amount": ""
-    },
-    {
-        "name": "",
-        "price": "",
-        "description": "",
-        "amount": ""
-    }
-];
+let myBasket = [];
