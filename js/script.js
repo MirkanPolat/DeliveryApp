@@ -32,27 +32,50 @@ function renderMenuTemplate(i) { // rendert das linke menu
 }
 function renderBasketTemplate(y){ // rendert den warenkorb
     return /*html*/`
-        <div class="empty-basket">
-           <p class="center">Warenkorb</p>
-            <div class="split"></div>
-            <div class="content">
-              <div>
-                <p>${myBasket[y].name}</p>
-              </div>
-            <div>
-        </div>
+
+  <div class="content">
+    <p>${myBasket[y].name}</p>
+    <div class="amounts">
+      <p>-</p>
+      <p>${myBasket[y].amount}</p>
+      <p>+</p>
+      <p>${myBasket[y].price}</p>
+      <img src="/assets/img/Logo/trash.png" alt="trash" height="35px" />
+    </div>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td>Zwischensumme:</td>
+        <td>${myBasket[y].price}</td>
+      </tr>
+      <tr>
+        <td>lieferkosten:</td>
+        <td> 5.00€</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
     `
 }
 function addDishes(i){ // pusht den menu ins basket
-    myBasket.push(myDishes[i])
+    myBasket.push({
+      name: myDishes[i].name,
+      price: myDishes[i].price,
+      amount: myDishes[i].amount
+    });
+    
+
     let basket = document.getElementById("basket");
     basket.innerHTML = "";
-    renderMenus();
+
+  renderMenus();
+    
 }
 function emptyBasket(){ // zeigt den leeren Warenkorb an 
     return /*html*/`
-        <div class="empty-basket">
-           <p class="center">Warenkorb</p>
+        <div>
             <div class="split"></div>
             <div class="content">
               <p class="center">Wähle leckere Gerichte aus der Karte und bestelle dein Menu <img src="/assets/img/Logo/empty-basket.png" height="55px" alt="basket"></p>
