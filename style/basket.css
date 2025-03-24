@@ -20,9 +20,11 @@
 .center{
     text-align: center;
 }
-.content{
+#basket{
     height: 400px;
+    overflow-y: auto;
 }
+
 .center img{
     padding-top: 39px;
 }
