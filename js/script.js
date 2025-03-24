@@ -22,7 +22,7 @@ function renderBasket(y){
     basket.innerHTML += renderBasketTemplate(y);
   }
   let delivery = document.getElementById("delivery-info");
-  delivery.innerHTML = renderDeliveryInfos();
+  delivery.innerHTML = renderDeliveryInfos(y);
 }
 }
 
@@ -44,36 +44,62 @@ function renderBasketTemplate(y){ // rendert den warenkorb
   <div class="content">
     <p>${myBasket[y].name}</p>
     <div class="amounts">
-      <p>-</p>
+      <p onclick="deleteOneMore(${y})" >-</p>
       <p>${myBasket[y].amount}</p>
       <p onclick="addOneMore(${y})">+</p>
-      <p>${myBasket[y].price.toFixed(2)} €</p>
-      <img src="assets/img/Logo/trash.png" alt="trash" height="35px"/>
+      <p>${(myBasket[y].price * myBasket[y].amount).toFixed(2)} €</p>
+      <img onclick="deleteEVerything(${y})" src="assets/img/Logo/trash.png" alt="trash" height="35px"/>
     </div>
   </div>
 </div>
     `
 }
-function addOneMore(y){
-    myBasket[y].amount++;
-    renderBasket()
+
+function deleteEVerything(y){ // deleteAll
+  myBasket.splice(y,1)
+  renderBasket();
 }
 
-function renderDeliveryInfos(){
+function deleteOneMore(y){ // - delete one dish
 
+  if(myBasket[y].amount > 1)
+    myBasket[y].amount --;
+  else{
+    myBasket.splice(y,1);
+  }
+
+  renderBasket();
+}
+function addOneMore(y){ // + amount
+    myBasket[y].amount++;
+    renderBasket();
+}
+
+function calcDeliveryInfos(y){
+  let deliveryCost = 5.00;
+  let totalCost = deliveryCost + myBasket[y].price
+
+  for (let c = 0; c < array.length; c++) {
+    const element = array[c];
+    
+  }
+
+}
+
+function renderDeliveryInfos(y){ // In the building män tranqilo
 return /*html*/`
     <table>
       <tr>
-        <td>Zwischensumme:</td>
-        <td></td>
+        <td>Zwischensumme:</td>    
+        <td>${myBasket[y].price}</td>
       </tr>
       <tr>
         <td>lieferkosten:</td>
-        <td> 5.00 €</td>
+        <td> ${deliveryCost.toFixed(2)} €</td>
       </tr>
       <tr>
        <td><b>Gesamt</b></td>
-       <td><b></b></td>
+       <td><b>${totalCost}</b></td>
       </tr>
     </table>
 `
