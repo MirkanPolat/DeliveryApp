@@ -11,18 +11,18 @@ function renderMenus() {
   }
 }
 
-function renderBasket(y){
+function renderBasket(){
   let basket = document.getElementById("basket");
   basket.innerHTML = "";
 
-  if(myBasket.length === 0){
+  if(name.length === 0){
     basket.innerHTML = emptyBasket();
   }else{
-  for (let y = 0; y < myBasket.length; y++) {
+  for (let y = 0; y < name.length; y++) {
     basket.innerHTML += renderBasketTemplate(y);
   }
   let delivery = document.getElementById("delivery-info");
-  delivery.innerHTML = renderDeliveryInfos(y);
+  delivery.innerHTML = renderDeliveryInfos();
 }
 }
 
@@ -42,12 +42,12 @@ function renderMenuTemplate(i) { // rendert das linke menu
 function renderBasketTemplate(y){ // rendert den warenkorb
     return /*html*/`
   <div class="content">
-    <p>${myBasket[y].name}</p>
+    <p>${name[y]}</p>
     <div class="amounts">
-      <p onclick="deleteOneMore(${y})" >-</p>
-      <p>${myBasket[y].amount}</p>
+      <p onclick="deleteOneMore(${y})">-</p>
+      <p>${amount[y]}</p>
       <p onclick="addOneMore(${y})">+</p>
-      <p>${(myBasket[y].price * myBasket[y].amount).toFixed(2)} €</p>
+      <p>${(price[y] * amount[y]).toFixed(2)} €</p>
       <img onclick="deleteEVerything(${y})" src="assets/img/Logo/trash.png" alt="trash" height="35px"/>
     </div>
   </div>
@@ -62,61 +62,67 @@ function deleteEVerything(y){ // deleteAll
 
 function deleteOneMore(y){ // - delete one dish
 
-  if(myBasket[y].amount > 1)
-    myBasket[y].amount --;
+  if(amount[y] > 1)
+    amount[y] --;
   else{
-    myBasket.splice(y,1);
+    amount.splice(y,1);
+    price.splice(y,1);
+    name.splice(y,1);
+
   }
 
   renderBasket();
 }
 function addOneMore(y){ // + amount
-    myBasket[y].amount++;
+    amount[y]++;
     renderBasket();
 }
 
 function calcDeliveryInfos(y){
   let deliveryCost = 5.00;
-  let totalCost = deliveryCost + myBasket[y].price
+  let totalCost = deliveryCost + price
 
-  for (let c = 0; c < array.length; c++) {
-    const element = array[c];
+  for (let x = 0; x < price.length; x++) {
+    
     
   }
-
 }
 
-function renderDeliveryInfos(y){ // In the building män tranqilo
+function renderDeliveryInfos(){ // In the building 
 return /*html*/`
     <table>
       <tr>
         <td>Zwischensumme:</td>    
-        <td>${myBasket[y].price}</td>
+        <td></td>
       </tr>
       <tr>
         <td>lieferkosten:</td>
-        <td> ${deliveryCost.toFixed(2)} €</td>
+        <td> €</td>
       </tr>
       <tr>
        <td><b>Gesamt</b></td>
-       <td><b>${totalCost}</b></td>
+       <td><b></b></td>
       </tr>
     </table>
 `
 }
 
+function getMenuIndex(i){
+  return name.indexOf(myDishes[i].name);
+}
+
 function addDishes(i){ // pusht den menu ins basket
-  if(myBasket[i]){
-    myBasket[i].amount++
+  let indexes = getMenuIndex(i);
+ 
+  if(amount[indexes] > 0){
+    amount[indexes]++
   }else
-    myBasket.push({
-      name: myDishes[i].name,
-      price: myDishes[i].price,
-      amount: myDishes[i].amount
-    });
+    {
+      name.push(myDishes[i].name),
+      price.push(myDishes[i].price),
+      amount.push(myDishes[i].amount)
+    };
     
-    let basket = document.getElementById("basket");
-    basket.innerHTML = "";
     renderBasket();
 }
 

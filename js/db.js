@@ -32,5 +32,8 @@ let myDishes = [
 ];
 
 
-let myBasket = [];
+
+let name = [];
+let price = [];
+let amount = [];
 
