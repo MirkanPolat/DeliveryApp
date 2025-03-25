@@ -56,7 +56,9 @@ function renderBasketTemplate(y){ // rendert den warenkorb
 }
 
 function deleteEVerything(y){ // deleteAll
-  myBasket.splice(y,1)
+    amount.splice(y,1);
+    price.splice(y,1);
+    name.splice(y,1);
   renderBasket();
 }
 
@@ -78,30 +80,38 @@ function addOneMore(y){ // + amount
     renderBasket();
 }
 
-function calcDeliveryInfos(y){
-  let deliveryCost = 5.00;
-  let totalCost = deliveryCost + price
-
+function calcDeliveryInfos(){
+  let delivery = document.getElementById("delivery-info");
+  let Zwischensumme = 0;
   for (let x = 0; x < price.length; x++) {
-    
-    
+    Zwischensumme += price[x]*amount[x]
+  }
+
+  let deliveryCost = 5.00;
+  let totalCost = Zwischensumme + deliveryCost;
+
+
+  if(price.length == 0){
+    delivery.innerHTML += "";
+  }else{
+  delivery.innerHTML = renderDeliveryInfos(totalCost,deliveryCost,Zwischensumme);
   }
 }
 
-function renderDeliveryInfos(){ // In the building 
+function renderDeliveryInfos(totalCost,deliveryCost,Zwischensumme){ // In the building 
 return /*html*/`
     <table>
       <tr>
         <td>Zwischensumme:</td>    
-        <td></td>
+        <td>${Zwischensumme}</td>
       </tr>
       <tr>
         <td>lieferkosten:</td>
-        <td> €</td>
+        <td> ${deliveryCost} €</td>
       </tr>
       <tr>
        <td><b>Gesamt</b></td>
-       <td><b></b></td>
+       <td><b>${totalCost}</b></td>
       </tr>
     </table>
 `
@@ -124,6 +134,7 @@ function addDishes(i){ // pusht den menu ins basket
     };
     
     renderBasket();
+    calcDeliveryInfos();
 }
 
 function emptyBasket(){ // zeigt den leeren Warenkorb an 
