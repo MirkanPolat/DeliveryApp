@@ -56,8 +56,16 @@ function openOverlay(){
 function finishedBlock(){
     document.getElementById("overlay").innerHTML = 
  /*html*/`
-   <div class="job-done">
+   <div onclick="stopWindow(event)" class="job-done">
+    <button onclick="openOverlay()" class="btn">Close me</button>
+    <p class="center">Vielen Dank ,
+        ihre Bestellung wird in Ca. 40min. eintreffen.
+    </p>
 
    </div>
     `
 }
+
+function stopWindow(event) {
+    event.stopPropagation();
+  }
