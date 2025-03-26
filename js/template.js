@@ -27,12 +27,12 @@ function renderBasketTemplate(y) { // rendert den warenkorb
     `;
 }
 
-function renderDeliveryInfosTemplate(totalCost,deliveryCost,Zwischensumme){ // In the building 
+function renderDeliveryInfosTemplate(totalCost,deliveryCost,subTotal){ // In the building 
     return /*html*/`
         <table>
           <tr>
             <td>Zwischensumme:</td>    
-            <td>${Zwischensumme} €</td>
+            <td>${subTotal} €</td>
           </tr>
           <tr>
             <td>lieferkosten:</td>
@@ -47,3 +47,17 @@ function renderDeliveryInfosTemplate(totalCost,deliveryCost,Zwischensumme){ // I
         <button onclick="openOverlay()" class="btn"> Bestellung Aufgeben TOTAL: ${totalCost}</button>
     `
     }
+
+function openOverlay(){
+    document.getElementById("overlay").classList.toggle("d-none")
+    finishedBlock();
+}
+
+function finishedBlock(){
+    document.getElementById("overlay").innerHTML = 
+ /*html*/`
+   <div class="job-done">
+
+   </div>
+    `
+}

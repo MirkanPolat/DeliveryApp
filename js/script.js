@@ -50,19 +50,19 @@ function addOneMore(y){ // + amount
 
 function calcDeliveryInfos(){
   let delivery = document.getElementById("delivery-info");
-  let Zwischensumme = 0;
+  let subTotal = 0;
   
   for (let x = 0; x < price.length; x++) {
-    Zwischensumme += price[x]*amount[x]
+    subTotal += price[x]*amount[x]
   }
 
   let deliveryCost = 5.00;
-  let totalCost = Zwischensumme + deliveryCost;
+  let totalCost = subTotal + deliveryCost;
 
   if(price.length == 0){
     delivery.innerHTML += "";
   }else{
-  delivery.innerHTML = renderDeliveryInfosTemplate(totalCost,deliveryCost,Zwischensumme);
+  delivery.innerHTML = renderDeliveryInfosTemplate(totalCost,deliveryCost,subTotal);
   }
 }
 
