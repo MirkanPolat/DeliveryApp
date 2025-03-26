@@ -44,8 +44,6 @@ h1{
   min-height: calc(100vh - 160px);
   max-width: 1440px;
   margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
   display: flex;
 }
 .leftPart {

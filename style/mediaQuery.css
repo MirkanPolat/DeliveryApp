@@ -1,0 +1,12 @@
+@media (max-width: 810px) {
+    .rightPart {
+      display: none;
+    }
+    .leftPart{
+        width: 100%;
+    }
+  }
+
+@media (min-width: 810px){
+    
+}
