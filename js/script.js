@@ -13,17 +13,23 @@ function renderMenus() {
 }
 
 function renderBasket(){
-  let basket = document.getElementById("basket");
+  let basket = document.getElementById("basket")
   basket.innerHTML = "";
+  
 
   if(name.length === 0){
     basket.innerHTML = emptyBasket();
   }else{
+
+ 
   for (let y = 0; y < name.length; y++) {
+   
     basket.innerHTML += renderBasketTemplate(y);
+
   }
 }
 }
+
 
 function deleteEVerything(y){ // deleteAll
     amount.splice(y,1);

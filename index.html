@@ -51,19 +51,22 @@
         <div class="menu-list-left" id="menuList"></div>
       </div>
 
-      <div class="rightPart">
+      <div id="toggle-rightPart" class="rightPart hidden">
         <div class="empty-basket">
           <p class="center">Warenkorb</p>
           <div class="split"></div>
-          <div id="basket"></div>
+          <div id="basket"></div> 
           <div id="delivery-info"></div>
       </div>
       <div onclick="openOverlay()" id="overlay" class="finish-delivery d-none">
 
       </div>
     </main>
-    <footer>
+    <div onclick="openOverlayOnMenu()" id="overlayMenu" class="finish-delivery d-none"></div>
+    <button onclick="openOverlayOnMenu()" id="overlayOnMenu" class="btn media-btn d-none"> Bestellung Aufgeben</button>
 
+    <footer>
+ 
     </footer>
   </body>
 </html>

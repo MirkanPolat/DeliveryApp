@@ -24,7 +24,10 @@
     height: 400px;
     overflow-y: auto;
 }
-
+.menuOverlayBasket{
+    height: 400px;
+    overflow-y: auto;
+}
 .center img{
     padding-top: 39px;
 }
@@ -67,4 +70,11 @@
     justify-content: center;
     font-size: 18px;
     flex-direction: column-reverse;
+}
+.MenuOnOverlay{
+    width: 400px;
+    height: 626px;
+    border:solid 2px rgb(179, 165, 165);
+     background-color: #e9e9e9;
+
 }

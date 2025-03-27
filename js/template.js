@@ -22,8 +22,9 @@ function renderBasketTemplate(y) { // rendert den warenkorb
       <p>${(price[y] * amount[y]).toFixed(2)} €</p>
       <img onclick="deleteEVerything(${y})" src="assets/img/Logo/trash.png" alt="trash" height="35px"/>
     </div>
-  </div>
 </div>
+  </div>
+  
     `;
 }
 
@@ -48,8 +49,10 @@ function renderDeliveryInfosTemplate(totalCost,deliveryCost,subTotal){ // In the
     `
     }
 
-function openOverlay(){
+function openOverlay(y){
     document.getElementById("overlay").classList.toggle("d-none")
+    deleteEVerything(y)
+  
     finishedBlock();
 }
 
@@ -69,3 +72,8 @@ function finishedBlock(){
 function stopWindow(event) {
     event.stopPropagation();
   }
+
+function openOverlayOnMenu(){
+    document.getElementById("overlayMenu").classList.toggle("d-none");
+    document.getElementById("toggle-rightPart").classList.toggle("hidden");
+}

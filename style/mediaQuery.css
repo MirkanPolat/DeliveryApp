@@ -1,6 +1,13 @@
 @media (max-width: 810px) {
     .rightPart {
-      display: none;
+      position: fixed;
+      width: 400px;
+      height: 800px;
+      z-index: +1;
+      background-color: rgba(0, 0, 0, 0.231);
+    }
+    .hidden{
+        display: none;
     }
     .leftPart{
         width: 100%;
@@ -8,5 +15,11 @@
   }
 
 @media (min-width: 810px){
-    
+    .media-btn{
+        display: none;
+    }
+}
+
+.media-btn{
+    margin-top: -64px;
 }
