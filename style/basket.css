@@ -1,80 +1,79 @@
-.myBasketsDiv{
-    display: flex;
-    align-items: center;
+.myBasketsDiv {
+  display: flex;
+  align-items: center;
 }
-.empty-basket{
-    width: 246px;
-    height: 640px;
-    font-size: 18px;
-    border:solid 2px rgb(179, 165, 165);
-    border-radius: 9px;
-    background-color: #e9e9e9;
-    padding-left: 5px;
-    padding-right: 5px;
+.empty-basket {
+  width: 246px;
+  height: 640px;
+  font-size: 18px;
+  border: solid 2px rgb(179, 165, 165);
+  border-radius: 9px;
+  background-color: #e9e9e9;
+  padding-left: 5px;
+  padding-right: 5px;
 }
-.split{
-    width: 100%;
-    height: 1px;
-    background-color: rgb(179, 165, 165);
+.split {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(179, 165, 165);
 }
-.center{
-    text-align: center;
+.center {
+  text-align: center;
 }
-#basket{
-    height: 400px;
-    overflow-y: auto;
+#basket {
+  height: 400px;
+  overflow-y: auto;
 }
-.menuOverlayBasket{
-    height: 400px;
-    overflow-y: auto;
+.menuOverlayBasket {
+  height: 400px;
+  overflow-y: auto;
 }
-.center img{
-    padding-top: 39px;
+.center img {
+  padding-top: 39px;
 }
-.amounts{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 20px;
+.amounts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 20px;
 }
-#delivery-info{
-    width: 100%;
-    height: 100px;
+#delivery-info {
+  width: 100%;
+  height: 100px;
 }
-.finish-delivery{
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.231);
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.finish-delivery {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.231);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.d-none{
-    display: none;
+.d-none {
+  display: none;
 }
-.job-done{
-    width: 500px;
-    height: 235px;
-    background-color: #edac86;
-    border-radius: 17px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    flex-direction: column-reverse;
+.job-done {
+  width: 500px;
+  height: 235px;
+  background-color: #edac86;
+  border-radius: 17px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-direction: column-reverse;
 }
-.MenuOnOverlay{
-    width: 400px;
-    height: 626px;
-    border:solid 2px rgb(179, 165, 165);
-     background-color: #e9e9e9;
-
+.MenuOnOverlay {
+  width: 400px;
+  height: 626px;
+  border: solid 2px rgb(179, 165, 165);
+  background-color: #e9e9e9;
 }
