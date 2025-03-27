@@ -52,7 +52,6 @@ function renderDeliveryInfosTemplate(totalCost,deliveryCost,subTotal){ // In the
 function openOverlay(y){
     document.getElementById("overlay").classList.toggle("d-none")
     deleteEVerything(y)
-  
     finishedBlock();
 }
 
@@ -64,7 +63,6 @@ function finishedBlock(){
     <p class="center">Vielen Dank ,
         ihre Bestellung wird in Ca. 40min. eintreffen.
     </p>
-
    </div>
     `
 }
