@@ -90,13 +90,21 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 100%;
+  margin-bottom: 56px;
 }
 .overlay-button{
-  height: 83px;
+  height: 56px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .links{
   text-decoration: none;
   color: black;
+  
 }

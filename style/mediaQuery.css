@@ -12,6 +12,9 @@
   .leftPart {
     width: 100%;
   }
+  .media-btn{
+    height: 56px;
+  }
   
 }
 
@@ -22,7 +25,9 @@
   .overlay-button {
     display: none;
 }
-  
+footer{
+    margin-bottom: 0px;
+  }
 }
 
 @media (max-width: 465px) {
