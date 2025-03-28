@@ -23,7 +23,15 @@ function renderBasket(){
 }
 }
 
-function deleteEVerything(y){ // deleteAll
+function deleteEVerything(){ // deleteAll onclick bestellen 
+  amount = [];
+  price = [];
+  name = [];
+  renderBasket();
+  calcDeliveryInfos();
+}
+
+function deleteToTrash(y){ // spliced mir nur eins raus 
   amount.splice(y,1);
   price.splice(y,1);
   name.splice(y,1);
@@ -64,7 +72,7 @@ function calcDeliveryInfos(){
   }else{
   delivery.innerHTML = renderDeliveryInfosTemplate(totalCost,deliveryCost,subTotal);
   calcButton(totalCost);
-  renderDeliveryInfosTemplate();
+  
   }
 }
 

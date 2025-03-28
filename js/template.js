@@ -24,7 +24,7 @@ function renderBasketTemplate(y){ // rendert den warenkorb
     <p>${amount[y]}</p>
     <p class="cursor" onclick="addOneMore(${y})">+</p>
     <p>${(price[y].toFixed(2) * amount[y]).toFixed(2)} €</p>
-    <img onclick="deleteEVerything(${y})"
+    <img onclick="deleteToTrash(${y})"
       src="assets/img/Logo/trash.png"
       alt="trash"
       height="35px">
@@ -38,26 +38,26 @@ function renderDeliveryInfosTemplate(totalCost,deliveryCost,subTotal){ // In the
 <table>
   <tr>
     <td>Zwischensumme:</td>
-    <td>${subTotal.toFixed(2)} €</td>
+    <td>${Number(subTotal).toFixed(2)} €</td>
   </tr>
   <tr>
     <td>lieferkosten:</td>
-    <td>${deliveryCost.toFixed(2)} €</td>
+    <td>${Number(deliveryCost).toFixed(2)} €</td>
   </tr>
   <tr>
     <td><b>Gesamt</b></td>
-    <td><b>${totalCost.toFixed(2)} €</b></td>
+    <td><b>${Number(totalCost).toFixed(2)} €</b></td>
   </tr>
 </table>
 <button onclick="openOverlay()" class="btn">
-  Bestellen TOTAL: ${totalCost.toFixed(2)}
+  Bestellen TOTAL: ${Number(totalCost).toFixed(2)}
 </button>
     `
 }
 
-function openOverlay(y){
+function openOverlay(){
     document.getElementById("overlay").classList.toggle("d-none")
-    deleteEVerything(y);
+    deleteEVerything();
     finishedBlock();
 }
 

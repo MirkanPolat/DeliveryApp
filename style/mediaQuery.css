@@ -12,12 +12,17 @@
   .leftPart {
     width: 100%;
   }
+  
 }
 
 @media (min-width: 810px) {
   .media-btn {
     display: none;
   }
+  .overlay-button {
+    display: none;
+}
+  
 }
 
 @media (max-width: 465px) {

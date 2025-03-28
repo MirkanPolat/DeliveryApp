@@ -24,7 +24,7 @@
       </div>
     </header>
     <main class="main">
-      <div class="leftPart">
+      <div id="switch" class="leftPart">
         <div class="atf-pics">
           <img
             class="food-imgs"
@@ -37,17 +37,14 @@
             alt=""
           />
         </div>
-
         <div>
           <h1>Paradise Noodles</h1>
           <p class="under-text">Bewertung (4.2 von 5 Sternen)</p>
         </div>
-
         <div class="menu-bar"> 
           <img src="assets/img/Logo/direction.png" alt="direction" />
-          <p>Hauptgerichte</p> 
+          <a class="links" href="#switch" >Hauptgerichte</a> 
           <p>Beilage</p>
-
         </div>
         <div class="menu-list-left" id="menuList"></div>
       </div>
@@ -59,13 +56,14 @@
           <div id="delivery-info"></div>
       </div>
       <div onclick="openOverlay()" id="overlay" class="finish-delivery d-none">
-
       </div>
     </main>
     <div onclick="openOverlayOnMenu()" id="overlayMenu" class="finish-delivery d-none"></div>
+    <div class="overlay-button">
     <button onclick="openOverlayOnMenu()" id="overlayOnMenu" class="btn media-btn d-none"> Bestellen: 0 €</button>
+    </div>
     <footer>
-      <img src="assets/img/Logo/Bestell App- Logo.svg" width="50px" alt="Logo">
+      <img src="assets/img/Logo/Bestell App- Logo.svg" width="110px" alt="Logo">
     </footer>
   </body>
 </html>

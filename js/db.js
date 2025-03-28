@@ -31,8 +31,6 @@ let myDishes = [
     }
 ];
 
-
-
 let name = [];
 let price = [];
 let amount = [];

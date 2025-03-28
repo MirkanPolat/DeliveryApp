@@ -3,6 +3,9 @@ body {
   padding: 0;
   font-family: "Schoolbell";
 }
+html{
+  scroll-behavior: smooth;
+}
 header {
   top: 0;
   left: 0;
@@ -89,4 +92,11 @@ footer {
   align-items: center;
   position: absolute;
   width: 100%;
+}
+.overlay-button{
+  height: 83px;
+}
+.links{
+  text-decoration: none;
+  color: black;
 }
